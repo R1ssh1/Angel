@@ -51,10 +51,10 @@
   display: block;
 }
 
-.main-nav a:hover, .main-nav li.active a {
+.main-nav a:hover, .main-nav a.active {
   color: var(--primary-red);
 }
 
-.main-nav li.active a {
+.main-nav a.active {
   border-bottom: 2px solid var(--primary-red);
 }

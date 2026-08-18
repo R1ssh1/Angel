@@ -3,12 +3,12 @@ import { ArrowRight } from 'lucide-react';
 import './Products.css';
 
 const productList = [
-  { id: 1, name: 'PIPES & TUBES' },
-  { id: 2, name: 'FITTINGS & FLANGES' },
-  { id: 3, name: 'PLATES & SHEETS' },
-  { id: 4, name: 'BARS & RODS' },
-  { id: 5, name: 'STRUCTURAL' },
-  { id: 6, name: 'RAW MATERIALS' },
+  { id: 1, name: 'PIPES & TUBES', image: '/products/nickel-alloy-201-pipes.webp' },
+  { id: 2, name: 'FITTINGS & FLANGES', image: '/products/ss-duplex-forged.webp' },
+  { id: 3, name: 'PLATES & SHEETS', image: '/products/ss-monel-400-plates.webp' },
+  { id: 4, name: 'BARS & RODS', image: '/products/ss-alloy-28-roundbars.webp' },
+  { id: 5, name: 'STRUCTURAL', image: '/products/angles-channels3.jpg' },
+  { id: 6, name: 'RAW MATERIALS', image: '/products/steel-wire.png' },
 ];
 
 const Products: React.FC = () => {
@@ -21,7 +21,9 @@ const Products: React.FC = () => {
         <div className="product-grid">
           {productList.map(product => (
             <div key={product.id} className="product-card">
-              <div className="product-img-placeholder"></div>
+              <div className="product-img-container">
+                <img src={product.image} alt={product.name} className="product-img" />
+              </div>
               <div className="product-info">
                 <h3>{product.name}</h3>
                 <ArrowRight size={18} className="product-arrow" />

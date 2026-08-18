@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
@@ -25,24 +26,24 @@ const Footer: React.FC = () => {
         <div className="footer-col links-col">
           <h4>QUICK LINKS</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#industries">Industries</a></li>
-            <li><a href="#quality">Quality</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/industries">Industries</Link></li>
+            <li><Link to="/quality">Quality</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
         
         <div className="footer-col links-col">
           <h4>PRODUCTS</h4>
           <ul>
-            <li><a href="#">Pipes & Tubes</a></li>
-            <li><a href="#">Fittings & Flanges</a></li>
-            <li><a href="#">Plates & Sheets</a></li>
-            <li><a href="#">Bars & Rods</a></li>
-            <li><a href="#">Structural</a></li>
-            <li><a href="#">Raw Materials</a></li>
+            <li><Link to="/products">Pipes & Tubes</Link></li>
+            <li><Link to="/products">Fittings & Flanges</Link></li>
+            <li><Link to="/products">Plates & Sheets</Link></li>
+            <li><Link to="/products">Bars & Rods</Link></li>
+            <li><Link to="/products">Structural</Link></li>
+            <li><Link to="/products">Raw Materials</Link></li>
           </ul>
         </div>
         

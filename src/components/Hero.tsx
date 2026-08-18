@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
+const slides = [
+  { id: 0, image: '/img/home/hero.png' },
+  { id: 1, image: '/img/home/hero-2.png' },
+  { id: 2, image: '/img/home/hero-3.png' }
+];
+
 const Hero: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="hero">
+    <section 
+      className="hero"
+      style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+    >
       <div className="hero-overlay"></div>
       <div className="container hero-container">
         <div className="hero-content">
@@ -23,9 +41,13 @@ const Hero: React.FC = () => {
         </div>
       </div>
       <div className="hero-pagination">
-        <span className="dot active"></span>
-        <span className="dot"></span>
-        <span className="dot empty"></span>
+        {slides.map((slide, index) => (
+          <span 
+            key={slide.id} 
+            className={`dot ${index === currentSlide ? 'active' : 'empty'}`}
+            onClick={() => setCurrentSlide(index)}
+          ></span>
+        ))}
       </div>
     </section>
   );

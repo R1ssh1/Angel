@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -6,23 +7,23 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="container header-container">
         <div className="logo-container">
-          <a href="#" className="logo-link">
+          <Link to="/" className="logo-link">
             <img src="/symbol.png" alt="Angel Metal India Symbol" className="header-logo-img" />
             <img src="/text.png" alt="Angel Metal India Text" className="header-text-img" />
-          </a>
+          </Link>
         </div>
         <nav className="main-nav">
           <ul>
-            <li className="active"><a href="#">HOME</a></li>
-            <li><a href="#about">ABOUT US</a></li>
-            <li><a href="#products">PRODUCTS</a></li>
-            <li><a href="#industries">INDUSTRIES</a></li>
-            <li><a href="#quality">QUALITY</a></li>
-            <li><a href="#contact">CONTACT US</a></li>
+            <li><NavLink to="/">HOME</NavLink></li>
+            <li><NavLink to="/about">ABOUT US</NavLink></li>
+            <li><NavLink to="/products">PRODUCTS</NavLink></li>
+            <li><NavLink to="/industries">INDUSTRIES</NavLink></li>
+            <li><NavLink to="/quality">QUALITY</NavLink></li>
+            <li><NavLink to="/contact">CONTACT US</NavLink></li>
           </ul>
         </nav>
         <div className="header-action">
-          <a href="#quote" className="btn btn-primary">GET A QUOTE</a>
+          <Link to="/contact" className="btn btn-primary">GET A QUOTE</Link>
         </div>
       </div>
     </header>
