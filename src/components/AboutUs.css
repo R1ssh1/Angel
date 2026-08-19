@@ -95,3 +95,61 @@
   line-height: 1;
   color: var(--dark-blue);
 }
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Switch from absolute-positioned overlap to a stacked relative layout */
+  .about-images {
+    width: 100%;
+    min-height: 280px;
+    position: relative;
+  }
+
+  .image-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 220px;
+  }
+
+  .image-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 58%;
+    height: 180px;
+    border-width: 6px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .watermark-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-images {
+    min-height: 220px;
+  }
+
+  .image-left {
+    height: 170px;
+  }
+
+  .image-right {
+    height: 140px;
+  }
+}
+

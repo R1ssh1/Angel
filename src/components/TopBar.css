@@ -55,3 +55,23 @@
   background-color: var(--primary-red);
   color: var(--white);
 }
+
+@media (max-width: 768px) {
+  .top-bar-container {
+    justify-content: center;
+  }
+
+  .top-bar-left {
+    display: none;
+  }
+
+  .top-bar-right {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info .contact-item:last-child {
+    display: none;
+  }
+}

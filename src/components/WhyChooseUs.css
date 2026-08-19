@@ -70,3 +70,38 @@
 .check-icon {
   color: var(--primary-red);
 }
+
+@media (max-width: 768px) {
+  .why-choose-us::before {
+    display: none;
+  }
+
+  .why-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .why-image {
+    width: 100%;
+  }
+
+  .why-symbol-img {
+    max-width: 50%;
+  }
+
+  .why-content {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-symbol-img {
+    max-width: 60%;
+  }
+
+  .strengths-list li {
+    font-size: 14px;
+  }
+}
+

@@ -58,3 +58,116 @@
 .main-nav a.active {
   border-bottom: 2px solid var(--primary-red);
 }
+
+/* ── Hamburger button ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--dark-blue);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.is-open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.is-open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── CTA inside mobile menu (hidden on desktop) ── */
+.nav-cta-mobile {
+  display: none;
+}
+
+/* ── Mobile breakpoint ── */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide desktop CTA button */
+  .header-action {
+    display: none;
+  }
+
+  /* Nav slides down from the header */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .main-nav.open {
+    max-height: 420px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0 16px;
+  }
+
+  .main-nav li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .main-nav li:last-child {
+    border-bottom: none;
+  }
+
+  .main-nav a {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .main-nav a.active {
+    border-bottom: none;
+    color: var(--primary-red);
+  }
+
+  /* Show GET A QUOTE inside mobile menu */
+  .nav-cta-mobile {
+    display: list-item;
+  }
+
+  .nav-cta-mobile a {
+    margin: 12px 20px 4px;
+    display: block;
+    text-align: center;
+    padding: 12px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo-img {
+    height: 44px;
+  }
+
+  .header-text-img {
+    height: 30px;
+  }
+}
+

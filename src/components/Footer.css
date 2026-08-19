@@ -132,4 +132,29 @@
   .footer-container {
     flex-direction: column;
   }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .contact-list li {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
