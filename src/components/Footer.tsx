@@ -9,8 +9,9 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-col brand-col">
-          <Link to="/" className="footer-logo-link">
-            <img src="/logo.png" alt="Angel Metal India" className="footer-logo-img" />
+          <Link to="/" className="footer-logo-box">
+            <img src="/symbol.png" alt="Angel Metal India Symbol" className="footer-logo-symbol" />
+            <img src="/text.png" alt="Angel Metal India Text" className="footer-logo-text" />
           </Link>
           <p className="footer-desc">
             Delivering quality metal solutions with trust, transparency and timely service.
